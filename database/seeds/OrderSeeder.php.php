@@ -11,7 +11,7 @@ class OrderSeeder extends Seeder
      */
     public function run()
     {
-        $order = factory(App\Entity\UserOrder::class, 10000)
-            ->create();
+//        $order = factory(App\Entity\UserOrder::class, 10000)
+//            ->create();
     }
 }
