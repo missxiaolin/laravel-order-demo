@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Repository\UserRepository;
-use App\Src\User\Service\UserService;
+use App\Src\Service\UserService;
 
 class UserController extends Controller
 {
