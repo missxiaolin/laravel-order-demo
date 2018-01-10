@@ -13,6 +13,5 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// 查询用户（测试）
+Route::get('/user/info', 'UserController@info')->name('user.info');
