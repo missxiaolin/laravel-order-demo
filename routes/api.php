@@ -14,4 +14,6 @@ use Illuminate\Http\Request;
 */
 
 // 查询用户（测试）
-Route::get('/user/info', 'UserController@info')->name('user.info');
+Route::any('/user/info', 'UserController@info')->name('user.info');
+//
+Route::any('/order/list', 'OrderController@orderList')->name('order.list');

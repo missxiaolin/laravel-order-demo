@@ -40,7 +40,7 @@ class User extends Model
     }
 
     /**
-     *
+     * 获取订单信息
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function items()

@@ -2,6 +2,8 @@
 
 namespace App\Src\Repository;
 
+use App\Entity\UserOrder;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entity\User;
@@ -72,5 +74,12 @@ class UserRepository extends BaseRepository implements RepositoryInterface
             ]);
         }
         return $model;
+    }
+
+    public function items()
+    {
+        $model  = app(UserOrder::class);
+        $model->setTableName($this->user_id);
+        return new HasMany($model->newQuery(), $this, 'user_id', 'user_id');
     }
 }
