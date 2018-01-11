@@ -41,7 +41,7 @@ class UserService
         $model = $userTable->getUserId($userId);
         if ($model) {
             /** @var User $model */
-            $result['user'] = $model->toArray();
+            $result['userInfo'] = $model->toArray();
             $orders = $model->items();
             $result['rows'] = $orders->get()->toArray();
         }
