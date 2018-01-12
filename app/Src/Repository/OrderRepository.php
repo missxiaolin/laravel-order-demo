@@ -31,13 +31,19 @@ class OrderRepository extends BaseRepository implements RepositoryInterface
     {
         $this->model
             ->setConnection('mysql_' . sprintf("%02d", $userId % 10))
-            ->setTable('user_' . sprintf("%02d", $userId % 10));
+            ->setTable('user_order_' . sprintf("%02d", $userId % 10));
         return $this;
     }
 
-    public function getOrderList()
+    /**
+     * @param $userId
+     */
+    public function getOrderList($userId)
     {
-
+        $order = new UserOrder();
+        $model = $order->setTableName($userId)->where(['user_id'=>$userId])->first();
+        $res = $model->load('user');
+        dd($res->toArray());
     }
 
 }

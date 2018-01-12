@@ -15,5 +15,7 @@ use Illuminate\Http\Request;
 
 // 查询用户（测试）
 Route::any('/user/info', 'UserController@info')->name('user.info');
-//
+// 获取订单列表
 Route::any('/order/list', 'OrderController@orderList')->name('order.list');
+// 获取订单列表（with测试）
+Route::any('/order/with/list', 'OrderController@lists')->name('order.with.list');

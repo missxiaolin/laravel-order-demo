@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 
 class UserOrder extends Model
 {
@@ -45,6 +47,17 @@ class UserOrder extends Model
     {
         $this->setConnection('mysql_' . sprintf("%02d", $this->user_id % 10))->setTable('user_order_' . sprintf("%02d", $userId % 10));
         return $this;
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function user()
+    {
+        $model = app(User::class);
+        $model->setTableName($this->user_id);
+        list($one, $two, $caller) = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 3);
+        return new BelongsTo($model->newQuery(), $this, 'user_id', 'user_id', $caller['function']);
     }
 
 
