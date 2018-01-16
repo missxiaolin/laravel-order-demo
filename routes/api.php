@@ -22,3 +22,4 @@ Route::any('/order/with/list', 'OrderController@lists')->name('order.with.list')
 
 // 门店创建
 Route::any('/shop/create', 'ShopController@create')->name('shop.create');
+Route::any('/shop/list', 'ShopController@shopList')->name('shop.list');

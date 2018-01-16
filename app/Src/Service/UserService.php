@@ -48,4 +48,24 @@ class UserService
 
         return $result;
     }
+
+    /**
+     * 获取shop
+     * @param $data
+     * @return array
+     * @throws \Exception
+     */
+    public static function getUserShop($data)
+    {
+        $result = [];
+        $userId = array_get($data, 'userId', '');
+        $userTable = app(UserRepository::class);
+        /** @var User $model */
+        $model = $userTable->getUserId($userId);
+        if (!$model) {
+            throw new \Exception('未找到改用户');
+        }
+        $result = $model->shop()->get();
+        return $result;
+    }
 }
