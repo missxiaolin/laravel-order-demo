@@ -10,8 +10,10 @@ class Shop extends Model
     protected $table = 'shop';
 
     protected $fillable = [
-        'name', 'address',
+        'name', 'address'
     ];
+
+    public $user_id;
 
     /**
      * The attributes that should be hidden for arrays.
@@ -19,7 +21,6 @@ class Shop extends Model
      * @var array
      */
     protected $hidden = [
-
     ];
 
     public function save(array $options = array())
