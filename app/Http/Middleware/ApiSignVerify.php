@@ -14,7 +14,7 @@ use Closure;
 class ApiSignVerify
 {
     public $router = [
-        "api/user/info"
+//        "api/user/info"
     ];
 
     public function handle($request, Closure $next)
