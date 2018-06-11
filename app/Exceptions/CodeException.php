@@ -14,6 +14,14 @@ use Throwable;
 
 class CodeException extends Exception
 {
+    /**
+     * CodeException constructor.
+     * @param int $code
+     * @param null $message
+     * @param Throwable|null $previous
+     * @throws \ReflectionException
+     * @throws \xiaolin\Enum\Exception\EnumException
+     */
     public function __construct($code = 0, $message = null, Throwable $previous = null)
     {
         if ($message === null) {
