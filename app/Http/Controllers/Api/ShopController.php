@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Exceptions\CodeException;
 use App\Http\Controllers\Controller;
 use App\Src\Service\ShopService;
 use App\Src\Service\UserService;
+use App\Support\Enums\ErrorCode;
 
 class ShopController extends Controller
 {
     /**
      * 获取订单列表
      * @return \json
+     * @throws CodeException
      */
     public function create()
     {
@@ -23,20 +26,21 @@ class ShopController extends Controller
 
         $validator = validator($data, $rules);
         if ($validator->fails()) {
-            return response_error('参数错误', 20000);
+            throw new CodeException(ErrorCode::$ENUM_SYSTEM_API_PARAM_ERROR);
         }
         $response = [];
 
         try {
             $response = ShopService::create($data);
         } catch (\Exception $e) {
-            return response_error($e->getMessage(), 20000);
+            throw new CodeException(ErrorCode::$ENUM_SYSTEM_ERROR);
         }
         return response_success($response);
     }
 
     /**
      * @return \json
+     * @throws CodeException
      */
     public function shopList()
     {
@@ -47,14 +51,14 @@ class ShopController extends Controller
 
         $validator = validator($data, $rules);
         if ($validator->fails()) {
-            return response_error('参数错误', 20000);
+            throw new CodeException(ErrorCode::$ENUM_SYSTEM_API_PARAM_ERROR);
         }
         $response = [];
 
         try {
             $response = UserService::getUserShop($data);
         } catch (\Exception $e) {
-            return response_error($e->getMessage(), 20000);
+            throw new CodeException(ErrorCode::$ENUM_SYSTEM_ERROR);
         }
         return response_success($response);
     }

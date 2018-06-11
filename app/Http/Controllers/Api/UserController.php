@@ -2,17 +2,21 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Exceptions\CodeException;
 use App\Http\Controllers\Controller;
 use App\Src\Service\UserService;
+use App\Support\Enums\ErrorCode;
 
 class UserController extends Controller
 {
     /**
      * 获取用户
      * @return \json
+     * @throws CodeException
      */
     public function info()
     {
+        $response = [];
         $data = request()->all();
 
         $rules = [
@@ -21,13 +25,14 @@ class UserController extends Controller
 
         $validator = validator($data, $rules);
         if ($validator->fails()) {
-            return response_error('参数错误', 20000);
+            throw new CodeException(ErrorCode::$ENUM_SYSTEM_API_PARAM_ERROR);
         }
         try {
             $response = UserService::getUserInfoId($data);
         } catch (\Exception $e) {
-            return response_error($e->getMessage(), 20000);
+            throw new CodeException(ErrorCode::$ENUM_SYSTEM_ERROR);
         }
+
         return response_success($response);
     }
 }

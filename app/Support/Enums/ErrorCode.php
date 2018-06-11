@@ -17,4 +17,9 @@ class ErrorCode extends Enum
      * @Message('系统错误')
      */
     public static $ENUM_SYSTEM_ERROR = 400;
+
+    /**
+     * @Message('参数错误')
+     */
+    public static $ENUM_SYSTEM_API_PARAM_ERROR = 1000;
 }
