@@ -43,6 +43,15 @@ class ExampleTest extends TestCase
         $this->assertEquals(19, strlen($id));
     }
 
+    /**
+     * @throws \Exception
+     */
+    public function testUserId()
+    {
+        $id = get_order_id(1024);
+        $this->assertEquals(14, strlen($id));
+    }
+
     public function testAes()
     {
         $mobile = '17135501104';
