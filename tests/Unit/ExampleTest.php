@@ -29,6 +29,18 @@ class ExampleTest extends TestCase
     {
         $id = idClient::getInstance()->id(1, 1, intval(strtotime('2017-05-27')));
         $this->assertEquals($id, 52908628381697);
+        $this->assertEquals(14, strlen($id));
+    }
+
+    /**
+     * Id生成最大测试
+     * @throws \Exception
+     */
+    public function testMax()
+    {
+        $id = idClient::getInstance()->id(1, 1, intval(strtotime('9999-01-01')));
+        $this->assertEquals('1056492899794948097', $id);
+        $this->assertEquals(19, strlen($id));
     }
 
     public function testAes()
