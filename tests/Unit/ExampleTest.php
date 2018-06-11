@@ -38,4 +38,9 @@ class ExampleTest extends TestCase
         dump('解密后：' . $decode);
         $this->assertEquals($decode, $mobile);
     }
+
+    public function testError()
+    {
+        $this->assertTrue(true);
+    }
 }
