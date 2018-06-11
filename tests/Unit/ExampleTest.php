@@ -49,7 +49,7 @@ class ExampleTest extends TestCase
     public function testUserId()
     {
         $id = get_order_id(1024);
-        $this->assertEquals(14, strlen($id));
+        $this->assertEquals(15, strlen($id), intval(strtotime('2018-05-27')));
     }
 
     public function testAes()
