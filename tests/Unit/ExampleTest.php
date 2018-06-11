@@ -2,7 +2,9 @@
 
 namespace Tests\Unit;
 
+use App\Exceptions\CodeException;
 use App\Support\Encrypt\Aes;
+use App\Support\Enums\ErrorCode;
 use App\Support\Id\idClient;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -39,8 +41,13 @@ class ExampleTest extends TestCase
         $this->assertEquals($decode, $mobile);
     }
 
+    /**
+     * @throws \ReflectionException
+     * @throws \xiaolin\Enum\Exception\EnumException
+     */
     public function testError()
     {
-        $this->assertTrue(true);
+        $this->assertEquals(400, ErrorCode::$ENUM_SYSTEM_ERROR);
+        $this->assertEquals('系统错误', ErrorCode::getMessage(ErrorCode::$ENUM_SYSTEM_ERROR));
     }
 }
