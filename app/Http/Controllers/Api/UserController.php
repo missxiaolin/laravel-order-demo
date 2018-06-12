@@ -13,6 +13,8 @@ class UserController extends Controller
      * 获取用户
      * @return \json
      * @throws CodeException
+     * @throws \ReflectionException
+     * @throws \xiaolin\Enum\Exception\EnumException
      */
     public function info()
     {

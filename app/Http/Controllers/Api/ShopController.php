@@ -14,6 +14,8 @@ class ShopController extends Controller
      * 获取订单列表
      * @return \json
      * @throws CodeException
+     * @throws \ReflectionException
+     * @throws \xiaolin\Enum\Exception\EnumException
      */
     public function create()
     {
@@ -41,6 +43,8 @@ class ShopController extends Controller
     /**
      * @return \json
      * @throws CodeException
+     * @throws \ReflectionException
+     * @throws \xiaolin\Enum\Exception\EnumException
      */
     public function shopList()
     {

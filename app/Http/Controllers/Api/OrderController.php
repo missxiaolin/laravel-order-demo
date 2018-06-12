@@ -14,6 +14,8 @@ class OrderController extends Controller
      * 获取订单列表
      * @return \json
      * @throws CodeException
+     * @throws \ReflectionException
+     * @throws \xiaolin\Enum\Exception\EnumException
      */
     public function orderList()
     {
@@ -39,6 +41,8 @@ class OrderController extends Controller
      * with 用法
      * @return \json
      * @throws CodeException
+     * @throws \ReflectionException
+     * @throws \xiaolin\Enum\Exception\EnumException
      */
     public function lists()
     {
