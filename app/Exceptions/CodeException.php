@@ -14,6 +14,8 @@ use Throwable;
 
 class CodeException extends Exception
 {
+    public $errorCode;
+
     /**
      * CodeException constructor.
      * @param int $code
@@ -24,9 +26,23 @@ class CodeException extends Exception
      */
     public function __construct($code = 0, $message = null, Throwable $previous = null)
     {
+        $this->errorCode = $code;
         if ($message === null) {
             $message = ErrorCode::getMessage($code);
         }
+
+        if (!is_int($code)) {
+            $code = 400;
+        }
+
         parent::__construct($message, $code, $previous);
+    }
+
+    /**
+     * @return int
+     */
+    public function getErrorCode()
+    {
+        return $this->errorCode;
     }
 }
