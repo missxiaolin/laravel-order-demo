@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ac828e205e2011b5aae4065a16cfec5",
+    "content-hash": "808dd26f51a9ceb340882d0f50b12fcf",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3284,16 +3284,16 @@
         },
         {
             "name": "xiaolin/enum",
-            "version": "0.1",
+            "version": "0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/missxiaolin/enum.git",
-                "reference": "04ede215212dffcd43259ee1a9d07704c94e0b91"
+                "reference": "54083f034550555a83709d2d132d5b6dc56b186d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/missxiaolin/enum/zipball/04ede215212dffcd43259ee1a9d07704c94e0b91",
-                "reference": "04ede215212dffcd43259ee1a9d07704c94e0b91",
+                "url": "https://api.github.com/repos/missxiaolin/enum/zipball/54083f034550555a83709d2d132d5b6dc56b186d",
+                "reference": "54083f034550555a83709d2d132d5b6dc56b186d",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3329,7 +3329,7 @@
             "keywords": [
                 "xiaolin"
             ],
-            "time": "2018-06-08T03:44:09+00:00"
+            "time": "2018-06-12T02:23:55+00:00"
         }
     ],
     "packages-dev": [
