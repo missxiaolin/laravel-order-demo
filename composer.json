@@ -14,7 +14,8 @@
         "predis/predis": "^1.1",
         "prettus/l5-repository": "^2.6",
         "tamayo/laravel-scout-elastic": "^3.0",
-        "xiaolin/enum": "^0.2"
+        "xiaolin/enum": "^0.2",
+        "xiaolin/laravel-table": "dev-master"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

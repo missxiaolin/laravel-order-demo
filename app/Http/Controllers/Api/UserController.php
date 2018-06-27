@@ -8,6 +8,7 @@ use App\Src\Basic\Filter;
 use App\Src\Form\User\InfoForm;
 use App\Src\Service\UserService;
 use App\Support\Enums\ErrorCode;
+use OkamiChen\TableShard\TableShardProvider;
 
 class UserController extends Controller
 {
