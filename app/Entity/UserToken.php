@@ -11,6 +11,10 @@ class UserToken extends Model
 
     protected $table = 't_users_token';
 
+    /**
+     * 分表建值
+     * @return string
+     */
     public function getShardKey()
     {
         return 'user_id';
