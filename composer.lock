@@ -3402,12 +3402,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/missxiaolin/laravel-table.git",
-                "reference": "48301012482ef52e76e9e9cb60ea1f9ee8f60601"
+                "reference": "792d37a9c6f90f598a45166c549042c7dc41511f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/missxiaolin/laravel-table/zipball/48301012482ef52e76e9e9cb60ea1f9ee8f60601",
-                "reference": "48301012482ef52e76e9e9cb60ea1f9ee8f60601",
+                "url": "https://api.github.com/repos/missxiaolin/laravel-table/zipball/792d37a9c6f90f598a45166c549042c7dc41511f",
+                "reference": "792d37a9c6f90f598a45166c549042c7dc41511f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3421,6 +3421,7 @@
                 "php": ">=7.0"
             },
             "require-dev": {
+                "laravel/framework": "5.5.*",
                 "phpunit/phpunit": ">=5.6"
             },
             "type": "library",
@@ -3448,7 +3449,7 @@
                 }
             ],
             "description": "laravel table shard compents",
-            "time": "2018-06-27T03:55:44+00:00"
+            "time": "2018-06-28T02:06:57+00:00"
         }
     ],
     "packages-dev": [
