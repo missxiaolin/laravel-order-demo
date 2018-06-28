@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "45085077cb8da2316473f0f2d88b88af",
+    "content-hash": "d78a3eb4830c2a34bc29a4e821a19f29",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3398,16 +3398,16 @@
         },
         {
             "name": "xiaolin/laravel-table",
-            "version": "dev-master",
+            "version": "0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/missxiaolin/laravel-table.git",
-                "reference": "792d37a9c6f90f598a45166c549042c7dc41511f"
+                "reference": "1ada681e3d5868970db4dbcf4fd52af738811bba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/missxiaolin/laravel-table/zipball/792d37a9c6f90f598a45166c549042c7dc41511f",
-                "reference": "792d37a9c6f90f598a45166c549042c7dc41511f",
+                "url": "https://api.github.com/repos/missxiaolin/laravel-table/zipball/1ada681e3d5868970db4dbcf4fd52af738811bba",
+                "reference": "1ada681e3d5868970db4dbcf4fd52af738811bba",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3423,6 +3423,27 @@
             "require-dev": {
                 "laravel/framework": "5.5.*",
                 "phpunit/phpunit": ">=5.6"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Required to use the SQS queue driver and SES mail driver (~3.0).",
+                "doctrine/dbal": "Required to rename columns and drop SQLite columns (~2.6).",
+                "ext-pcntl": "Required to use all features of the queue worker.",
+                "ext-posix": "Required to use all features of the queue worker.",
+                "fzaninotto/faker": "Required to use the eloquent factory builder (~1.4).",
+                "guzzlehttp/guzzle": "Required to use the Mailgun and Mandrill mail drivers and the ping methods on schedules (~6.0).",
+                "laravel/tinker": "Required to use the tinker console command (~1.0).",
+                "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (~1.0).",
+                "league/flysystem-cached-adapter": "Required to use the Flysystem cache (~1.0).",
+                "league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (~1.0).",
+                "league/flysystem-sftp": "Required to use the Flysystem SFTP driver (~1.0).",
+                "nexmo/client": "Required to use the Nexmo transport (~1.0).",
+                "pda/pheanstalk": "Required to use the beanstalk queue driver (~3.0).",
+                "predis/predis": "Required to use the redis cache and queue drivers (~1.0).",
+                "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (~3.0).",
+                "symfony/css-selector": "Required to use some of the crawler integration testing tools (~4.0).",
+                "symfony/dom-crawler": "Required to use most of the crawler integration testing tools (~4.0).",
+                "symfony/psr-http-message-bridge": "Required to psr7 bridging features (~1.0).",
+                "tamayo/laravel-scout-elastic": "An Elasticsearch Client"
             },
             "type": "library",
             "extra": {
@@ -3449,7 +3470,7 @@
                 }
             ],
             "description": "laravel table shard compents",
-            "time": "2018-06-28T02:06:57+00:00"
+            "time": "2018-06-28T03:14:50+00:00"
         }
     ],
     "packages-dev": [
@@ -5382,9 +5403,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "xiaolin/laravel-table": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
