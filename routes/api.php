@@ -13,6 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
+// 分表模块测试
+Route::any('/user/token', 'UserController@token')->name('user.token');
+
 // 查询用户（测试）
 Route::any('/user/info', 'UserController@info')->name('user.info');
 // 获取订单列表

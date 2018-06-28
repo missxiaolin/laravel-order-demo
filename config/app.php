@@ -179,6 +179,8 @@ return [
         App\Providers\LoggerServiceProvider::class, // 日志记录
         App\Providers\SqlQueryServiceProvider::class, // sql记录
 
+        \OkamiChen\TableShard\TableShardProvider::class, // 分表
+
     ],
 
     /*

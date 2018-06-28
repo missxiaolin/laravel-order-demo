@@ -16,7 +16,7 @@ class SqlQueryServiceProvider extends ServiceProvider
     {
         $env    = env('APP_ENV');
         $debug  = env('SQL_DEBUG', false);
-        if($debug && in_array($debug, ['local','qa','pre','gr','testing'])){
+        if($debug && in_array($env, ['local','qa','pre','gr','testing'])){
             \DB::listen(function(QueryExecuted $query) {
                 $tmp = str_replace('?', '"' . '%s' . '"', $query->sql);
                 $tmp = vsprintf($tmp, $query->bindings);
