@@ -1,5 +1,9 @@
 # laravel-order-demo
 
+### 分库分表扩展类
+
+[链接](https://github.com/missxiaolin/laravel-table)
+
 ## 步骤
 
 ### 创建数据库
